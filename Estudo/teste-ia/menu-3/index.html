@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu completo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+  <a href="#" class="logo">Meu Site</a>
+
+  <nav>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">☰</button>
+
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="#" class="active" aria-current="page">Início</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Serviços</a></li>
+      <li><a href="#">Contato</a></li>
+      <li><a href="#" class="nav-cta">Fale conosco</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+    <article>
+        <h1>Meu site</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi similique facilis mollitia dolor debitis consequuntur autem iusto quod eveniet odit harum, distinctio officiis magnam libero enim, non iure numquam id?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut possimus dolore voluptatibus nesciunt minus optio ipsa et ratione consectetur, ab obcaecati voluptate officia, laboriosam fugit. Voluptatem molestiae necessitatibus quibusdam explicabo.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur accusamus perferendis doloribus placeat at magnam aliquid sunt, tempore beatae quos aperiam ducimus expedita enim eveniet, praesentium assumenda vel iure cumque!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, dolores. Minima porro incidunt iure est obcaecati molestiae blanditiis cum culpa unde exercitationem, quis beatae cumque quo ex maiores qui voluptates. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia distinctio aliquid, error aliquam ipsam quos nobis veniam rem. Et nobis in voluptatibus aut voluptatem. Totam dolor dolorum illum. Dignissimos, eveniet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda omnis illum earum hic adipisci eligendi nam animi quos nisi quas saepe aperiam ipsa, laboriosam minima dolorem aliquam provident maxime architecto? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat iure cum doloribus possimus. Aut in sunt illo soluta quam, quis nam, necessitatibus dolor dolores delectus quia quas odio. Voluptatum, corrupti?</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam dignissimos optio, nisi vero totam, quod fuga quos cupiditate nobis, recusandae quia quibusdam numquam debitis voluptatem sapiente iste eum at sint! Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo tempore laudantium inventore eligendi deleniti vitae asperiores? Quisquam eligendi dolorum fugiat est. Natus accusantium veritatis tenetur vero consequatur labore unde? Obcaecati.</p>
+    </article>
+</main>
+
+
+
+
+
+    <script>
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.querySelector('.nav-menu');
+  const links = document.querySelectorAll('.nav-menu a');
+
+  function setMenu(isOpen) {
+    menu.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen);
+    toggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+    toggle.textContent = isOpen ? '✕' : '☰';
+  }
+
+  toggle.addEventListener('click', () => {
+    setMenu(!menu.classList.contains('open'));
+  });
+
+  links.forEach((link) => {
+    link.addEventListener('click', () => {
+      setMenu(false);
+    });
+  });
+</script>
+
+</body>
+</html>

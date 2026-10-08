@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+  <a href="#" class="logo">Meu Site</a>
+
+  <nav>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">☰</button>
+
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="#" class="active" aria-current="page">Início</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Serviços</a></li>
+      <li><a href="#">Contato</a></li>
+      <li><a href="#" class="nav-cta">Fale conosco</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Advocacia Tributária</p>
+      <h1>Reduza sua carga tributária com segurança jurídica</h1>
+      <p class="hero-text">
+        Planejamento tributário, recuperação de créditos e defesa em
+        autuações fiscais para empresas e profissionais liberais.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#contato" class="btn btn-primary">Agende uma consulta</a>
+        <a href="#areas" class="btn btn-secondary">Conheça as áreas de atuação</a>
+      </div>
+    </div>
+  </section>
+  <section class="areas" id="areas">
+  <div class="container">
+    <h2 class="section-title">Áreas de atuação</h2>
+    <p class="section-subtitle">
+      Atuação estratégica para reduzir riscos e custos fiscais.
+    </p>
+
+    <div class="cards">
+      <article class="card">
+        <h3>Planejamento tributário</h3>
+        <p>Análise da estrutura da sua empresa para reduzir a carga de impostos dentro da lei.</p>
+      </article>
+
+      <article class="card">
+        <h3>Recuperação de créditos</h3>
+        <p>Identificação e recuperação de tributos pagos a mais nos últimos anos.</p>
+      </article>
+
+      <article class="card">
+        <h3>Defesa em autuações</h3>
+        <p>Defesa administrativa e judicial contra multas e cobranças fiscais indevidas.</p>
+      </article>
+    </div>
+  </div>
+</section>
+</main>
+
+
+
+
+
+
+
+
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.querySelector('.nav-menu');
+  const links = document.querySelectorAll('.nav-menu a');
+
+  function setMenu(isOpen) {
+    menu.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen);
+    toggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+    toggle.textContent = isOpen ? '✕' : '☰';
+  }
+
+  toggle.addEventListener('click', () => {
+    setMenu(!menu.classList.contains('open'));
+  });
+
+  links.forEach((link) => {
+    link.addEventListener('click', () => {
+      setMenu(false);
+    });
+  });
+</script>
+</body>
+</html>
