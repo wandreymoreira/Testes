@@ -6,6 +6,47 @@
     box-sizing: border-box;
 }
 
+/*
+    #F2EFFD cinza fundo 
+    #1E293B para h1, h2 e h3 
+    #000000 Texto do artigo 
+    #FFFFFF fundo artigo 
+*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cabecalho {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F2EFFD;
+    margin-bottom: 1.5rem;
+
+}
+.cabecalho:focus-visible {
+    border: 2px dashed crimson;
+    border-radius: 3px;
+    outline: none;
+}
+
+.logo {
+    text-decoration: none;
+    color: #1E293B;
+}
+
+.nav-menu {
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+}
+
+.nav-menu > li > a {
+ text-decoration: none;
+ color: #1E293B;
+}
+
 
 
 
