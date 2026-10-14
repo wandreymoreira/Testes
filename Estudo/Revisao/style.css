@@ -14,19 +14,19 @@
   --cinza-400: #555555;
   --cinza-500: #2B2B2B;
   --preto: #000000;
-}
-
-:root {
-    --cor-primaria: #5A9187;
+   --cor-primaria: #5A9187;
   --cor-escura: #617974;
-  --cor-escura2: #448d80;
+  --cor-escura2: #75928c;
   --cor-clara: #C1F7ED;
   --cor-destaque: #94FFEB;
   --cor-vibrante: #61FFE2;
 }
 
+html { text-size-adjust: 100% }
+
 body {
     font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
 }
 
 /*Pai do logo e menu */
@@ -35,7 +35,7 @@ body {
     position: relative;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 2rem;
+    padding: 1rem 1.5rem;
     background-color: var(--cor-escura);
 }
 
@@ -43,27 +43,15 @@ body {
     display: inline-block;
     text-decoration: none;
     letter-spacing: 1px;
-    line-height: 1rem;
+    line-height: 1.2;
     color: var(--branco);
     font-weight: 700;
     font-size: 1.2rem;
 
 }
-/*Pai de nav-toggle e nav-menu */
-.menu {
-    
-}
-.nav-menu.open {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: var(--cor-escura2);
-    z-index: 10;
-}
+
 .nav-toggle {
+    font-family: inherit;
     background: none;
     border: none;
     color: var(--branco);
@@ -80,6 +68,17 @@ body {
     
 }
 
+.nav-menu.open {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--cor-escura2);
+    z-index: 10;
+    box-shadow: 2px 1px 5px var(--cinza-400);
+}
 
 .link-cabecalho {
     display: block;
@@ -87,26 +86,110 @@ body {
     color: var(--branco);
     padding: 1rem 1.5rem;
     transition: background-color 0.4s ease;
-    
-}
-
-.link-cabecalho:hover {
-    background-color: var(--cor-primaria); 
+    font-size: 1.1rem;
 }
 
 .logo:focus-visible,
 .nav-toggle:focus-visible,
 .link-cabecalho:focus-visible {
-    outline: 1px solid var(--cor-destaque);
+    outline: 4px solid var(--cor-primaria);
     outline-offset: 3px;        
     border-radius: 4px;         
 }
 
-img {
+.link-cabecalho:active {
+    color: var(--cor-destaque);
+}
+
+main {
+padding: 2rem 1.5rem;
+}
+
+article {
+max-width: 700px;
+margin: 0 auto;
+}
+
+.cabecalho-artigo h1 {
+    
+    text-align: center;
+    font-size: clamp(1.7rem, 5vw, 2.5rem); 
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    text-wrap: balance;
+}
+
+.paragrafo-header {
+    text-align: center;
+    margin: 0.5rem 0 ;
+    font-size: 1rem;
+}
+
+.imagem-principal{
     max-width: 100%;
     height: auto;
     display: block;
-    padding: 2rem;
+    margin: 2rem 0 1.5rem;
+}
+
+p{
+    font-size: 1rem;
+    text-align: left;
+}
+
+
+h2 {
+    font-size: clamp(1.4rem, 4vw, 2rem);   
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  text-wrap: balance;
+}
+
+footer {
+    background-color: var(--cor-escura);
+    color: var(--branco);
+}
+
+.nav-footer {
+padding: 2rem;
+}
+
+.direitos-reservados {
+  display: block;
+  text-align: center;
+  padding: 0.8rem;
+}
+
+
+.menu-redes-sociais {
+display: flex;
+flex-wrap: wrap;
+gap: 1rem;
+justify-content: center;
+list-style: none;
+}
+
+.menu-redes-sociais > li > a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    text-decoration: none;
+    color: var(--branco);
+    padding: 0.5rem 1rem;
+    transition: background-color 0.5s ease;
+    border-radius: 5px;
+    
+    
+}
+
+.logo:focus-visible,
+.nav-toggle:focus-visible,
+.link-cabecalho:focus-visible,
+.menu-redes-sociais a:focus-visible {
+    outline: 3px solid var(--cor-destaque);
+    outline-offset: 3px;
+    border-radius: 4px;
 }
 
 
@@ -114,12 +197,113 @@ img {
 
 
 
+@media (hover: hover) {
+    .link-cabecalho:hover {
+        background-color: var(--cor-primaria);
+    }
+
+    .menu-redes-sociais a:hover {
+        background-color: var(--cor-primaria);
+    }
+}
 
 
-
-
-
-
-
+@media (min-width: 768px) {
+ 
+    .cabecalho {
+        padding: 1.25rem 2rem;
+    }
+ 
+    main {
+        padding: 3rem 2rem;
+    }
+ 
+    /* limita a linha a ~65 caracteres: leitura confortável */
+    article {
+        max-width: 65ch;
+    }
+ 
+    .imagem-principal {
+        margin: 2.5rem 0 2rem;
+    }
+ 
+    /* rodapé: direitos de um lado, redes sociais do outro */
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 2rem;
+    }
+ 
+    .nav-footer {
+        padding: 0;
+    }
+ 
+    .direitos-reservados {
+        padding: 0;
+        margin: 0;
+        text-align: left;
+    }
+}
+ 
+ 
+/* -----------------------------------------------------
+   TABLET GRANDE (a partir de 1024px)
+   Menu em linha, hambúrguer some, mais respiro vertical
+   IMPORTANTE: o matchMedia do script.js deve usar 1024px
+   ----------------------------------------------------- */
+@media (min-width: 1024px) {
+ 
+    /* esconde o botão e anula os DOIS estados do menu */
+    .nav-toggle {
+        display: none;
+    }
+ 
+    .nav-menu,
+    .nav-menu.open {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        gap: 0.5rem;
+        background: none;
+        box-shadow: none;
+    }
+ 
+    .link-cabecalho {
+        padding: 0.75rem 1rem;
+        border-radius: 4px;
+    }
+ 
+    /* texto um pouco maior; a largura da linha acompanha o tamanho */
+    article {
+        font-size: 1.125rem;
+    }
+ 
+    p {
+        font-size: 1em;
+    }
+ 
+    h2 {
+        margin-top: 3rem;
+    }
+ 
+    main {
+        padding: 4rem 2rem;
+    }
+}
+ 
+ 
+/* -----------------------------------------------------
+   TELAS MAIORES (a partir de 1280px)
+   Logo e rodapé alinhados a uma coluna central de 1200px,
+   com o fundo colorido ocupando a largura toda
+   ----------------------------------------------------- */
+@media (min-width: 1280px) {
+ 
+    .cabecalho,
+    footer {
+        padding-inline: max(2rem, calc((100% - 1200px) / 2));
+    }
+}
 
 
