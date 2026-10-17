@@ -13,9 +13,9 @@
 
         <a href="#" class="logo">FrontProfissional</a>
 
-        <button class="botao-menu" aria-expanded="false" aria-controls="menu-navegacao" aria-label="Abrir menu"><span class="fa-solid fa-bars"></span></button>
+        <button type="button" class="botao-menu" aria-expanded="false" aria-controls="menu-navegacao" aria-label="Abrir menu"><span class="fa-solid fa-bars" aria-hidden="true"></span></button>
 
-        <nav class="menu-principal" id="menu-navegacao">
+        <nav class="menu-principal" id="menu-navegacao" aria-label="Navegação principal">
             <ul class="menu-lista">
                 <li class="menu-item"><a class="menu-link" href="#">Início</a></li>
                 <li class="menu-item"><a class="menu-link" href="#">Sobre Nós</a></li>
@@ -29,7 +29,10 @@
         <article>
             <header class="cabecalho-artigo">
                 <h1>5 Hábitos para se Profissionalizar como Desenvolvedor Front-end</h1>
-                <p class="paragrafo-header">Autor: Maria Souza | Categoria: Carreira em Tecnologia<time datetime="2026-10-14"> <br> 14 de Outubro de 2026</time></p>
+                <p class="paragrafo-header">Autor: Maria Souza | Categoria: Carreira em Tecnologia</p>
+
+                <time datetime="2026-10-14"> 14 de Outubro de 2026</time>
+
             </header>
             <img class="imagem-artigo" src="imagens/imagem-artigo.jpg" alt="Mesa de trabalho com notebook mostrando código e um caderno com anotações">
 
@@ -50,14 +53,14 @@
             <h2>5. Estude pela documentação e mantenha um registro do que aprende</h2>
             <p>Tutoriais ajudam a começar, mas a documentação oficial e as referências confiáveis ensinam o motivo de cada propriedade. Anote os erros que você cometeu e como os corrigiu. Com o tempo, essas anotações viram o seu guia pessoal de consulta.</p>
 
-            <h2></h2>
+            <h2>Conclusão</h2>
             <p>Profissionalizar-se não acontece de uma vez, e sim a cada projeto revisado, testado e melhorado. Você não precisa saber tudo hoje. Escolha um desses hábitos, aplique no próximo exercício e vá somando os outros aos poucos. Bons estudos e até a próxima prática!</p>
         </article>
         
     </main>
 <footer class="rodape">
-            <small class="direitos-resevados">© 2026 FrontProfissional. Todos os direitos reservados.</small>
-            <nav>
+            <small class="direitos-reservados">© 2026 FrontProfissional. Todos os direitos reservados.</small>
+            <nav aria-label="Redes sociais">
                 <ul class="menu-footer">
                     <li><a href="#">Instagram</a></li>
                     <li><a href="#">Twitter</a></li>
