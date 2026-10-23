@@ -1,61 +1,84 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("form");
-    const nome = document.getElementById("name");
-    const email = document.getElementById("email");
-    const telefone = document.getElementById("telefone");
-    const tipoEmpresa = document.getElementById("tipo-empresa");
-    const mensagem = document.getElementById("mensagem");
-    const aceite = document.getElementById("aceite-termos");
 
-    // Função que aplica as suas mensagens personalizadas de erro
-    function aplicarValidacaoCustomizada() {
-        
-        // 1. Erro para campos obrigatórios comuns (Nome, Telefone, Empresa, Mensagem)
-        const camposObrigatorios = [nome, telefone, tipoEmpresa, mensagem];
-        camposObrigatorios.forEach(campo => {
-            if (campo && campo.validity.valueMissing) {
-                campo.setCustomValidity("Preencha este campo.");
-            }
-        });
+(() => {
+  'use strict';
 
-        // 2. Erros customizados para o E-mail
-        if (email) {
-            if (email.validity.valueMissing) {
-                email.setCustomValidity("Preencha este campo.");
-            } else if (email.validity.typeMismatch) {
-                email.setCustomValidity("Digite um e-mail válido, como nome@email.com.");
-            }
-        }
+  const botao = document.querySelector('#btn-menu');
+  const menu = document.querySelector('#menu-navegacao');
 
-        // 3. Erro customizado para o Checkbox (Aceite)
-        if (aceite && aceite.validity.valueMissing) {
-            aceite.setCustomValidity("Para enviar, marque a caixa de concordância.");
-        }
+  // Interrompe o script se os elementos não existirem
+  if (!botao || !menu) return;
+
+  const iconeBotao = botao.querySelector('.fa-solid');
+
+  // Deve corresponder ao breakpoint usado no CSS
+  const breakpointDesktop = window.matchMedia('(min-width: 870px)');
+
+  const abrirMenu = () => {
+    menu.classList.add('open');
+    botao.setAttribute('aria-expanded', 'true');
+    botao.setAttribute('aria-label', 'Fechar menu');
+
+    if (iconeBotao) {
+      iconeBotao.classList.remove('fa-bars');
+      iconeBotao.classList.add('fa-xmark');
     }
+  };
 
-    // Executa a validação toda vez que o usuário clica em enviar
-    form.addEventListener("submit", function (event) {
-        // Remove validações antigas antes de testar
-        nome.setCustomValidity("");
-        email.setCustomValidity("");
-        telefone.setCustomValidity("");
-        tipoEmpresa.setCustomValidity("");
-        mensagem.setCustomValidity("");
-        aceite.setCustomValidity("");
+  const fecharMenu = () => {
+    menu.classList.remove('open');
+    botao.setAttribute('aria-expanded', 'false');
+    botao.setAttribute('aria-label', 'Abrir menu');
 
-        aplicarValidacaoCustomizada();
+    if (iconeBotao) {
+      iconeBotao.classList.remove('fa-xmark');
+      iconeBotao.classList.add('fa-bars');
+    }
+  };
 
-        // Se o formulário não for válido, o navegador mostra os balões com seus textos
-        if (!form.checkValidity()) {
-            event.preventDefault(); // Impede o envio se houver erros
-        } else {
-            // Se tudo estiver correto, impede o recarregamento real da página para simular o sucesso
-            event.preventDefault(); 
-            
-            // Exibe a sua mensagem de sucesso personalizada
-            alert("Recebemos a sua mensagem! Em breve, um contador entrará em contato.");
-            
-            form.reset(); // Limpa o formulário após o envio bem-sucedido
-        }
-    });
-});
+  // Abre ou fecha o menu pelo botão
+  botao.addEventListener('click', () => {
+    const estaAberto =
+      botao.getAttribute('aria-expanded') === 'true';
+
+    if (estaAberto) {
+      fecharMenu();
+    } else {
+      abrirMenu();
+    }
+  });
+
+  // Fecha ao clicar em um link da navegação
+  menu.addEventListener('click', (evento) => {
+    if (evento.target.closest('a')) {
+      fecharMenu();
+    }
+  });
+
+  // Fecha ao clicar fora do botão e do menu
+  document.addEventListener('click', (evento) => {
+    const clicouNoBotao = evento.target.closest('#btn-menu');
+    const clicouNoMenu = evento.target.closest('#menu-navegacao');
+
+    if (!clicouNoBotao && !clicouNoMenu) {
+      fecharMenu();
+    }
+  });
+
+  // Fecha com Escape e devolve o foco ao botão
+  document.addEventListener('keydown', (evento) => {
+    if (
+      evento.key === 'Escape' &&
+      botao.getAttribute('aria-expanded') === 'true'
+    ) {
+      fecharMenu();
+      botao.focus();
+    }
+  });
+
+  // Fecha o menu ao entrar no breakpoint desktop
+  breakpointDesktop.addEventListener('change', (evento) => {
+    if (evento.matches) {
+      fecharMenu();
+    }
+  });
+})();
