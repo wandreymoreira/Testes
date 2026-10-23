@@ -10,11 +10,11 @@
     <script src="https://kit.fontawesome.com/9675944a91.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
+    <header class="cabecalho">
 
-        <a href="#">Clareza Contábil</a>
+        <a href="#hero">Clareza Contábil</a>
 
-        <button id="btn-menu" class="burger-menu" type="button" aria-label="Abrir menu" aria-expanded="true" aria-controls="menu-navegacao"><span class="fa-solid fa-bars"></span> </span></button>
+        <button id="btn-menu" class="burger-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-navegacao"><span class="fa-solid fa-bars"></span> </button>
 
         <nav id="menu-navegacao" class="nav-menu">
             <ul class="menu-lista">
@@ -34,16 +34,17 @@
 
         <section id="hero"  class="hero"> 
 
-            <h1>Pague menos impostos, dentro da lei</h1>
-            <p>Fazemos o planejamento tributário da sua empresa para que você recolha apenas o que realmente deve, com segurança e sem sustos com a fiscalização.</p>
-            
-            <img src="" alt="Contador conversando com empresária diante de um notebook com gráficos">
-
-            <div>
-                <a href="" class="botao-principal">Solicitar análise gratuita</a>
-                <a href="" class="botao-segundario">Conheça os serviços</a>
+            <div class="container-hero">
+                <h1>Pague menos impostos, dentro da lei</h1>
+                <p>Fazemos o planejamento tributário da sua empresa para que você recolha apenas o que realmente deve, com segurança e sem sustos com a fiscalização.</p>
+                
+                <img class="imagens-hero" src="" alt="Contador conversando com empresária diante de um notebook com gráficos">
+                <div>
+                    <a href="#fale-conosco" class="botao-principal">Solicitar análise gratuita</a>
+                    <a href="#servicos" class="botao-segundario">Conheça os serviços</a>
+                </div>
+                <p class="text-apoio-hero">Atendimento para MEI, microempresas e empresas de pequeno e médio porte, em todo o Brasil e 100% online.</p>
             </div>
-            <p class="text-apoio-hero">Atendimento para MEI, microempresas e empresas de pequeno e médio porte, em todo o Brasil e 100% online.</p>
 
         </section>
 
@@ -63,40 +64,37 @@
 
             <h2>O que fazemos pela sua empresa</h2>
 
-            <div class="card">
-                <h3>Planejamento tributário</h3>
-                <p>Estudamos o seu faturamento, as suas despesas e a sua atividade para comparar os regimes possíveis e indicar o que gera menos imposto no seu caso.</p>
-            </div>
-            
-            <div class="card">
-                <h3>Revisão de impostos já pagos
-</h3>
-                <p>Analisamos os últimos anos em busca de valores recolhidos a mais e verificamos se há possibilidade de recuperá-los, conforme as regras vigentes.
-</p>
-            </div>
-
-            <div class="card">
-                <h3>Abertura e alteração de empresa</h3>
-                <p>Abrimos o seu CNPJ já com a atividade e o regime corretos, ou ajustamos uma empresa existente, sem retrabalho.
-</p>
-            </div>
-
-            <div class="card">
-                <h3>Contabilidade completa</h3>
-                <p>Escrituração, folha de pagamento, obrigações acessórias e declarações em dia, com relatórios claros sobre a saúde financeira do negócio.
-</p>
-            </div>
-
-            <div class="card">
-                <h3>Planejamento para profissionais autônomos</h3>
-                <p>Orientamos médicos, advogados, consultores, designers e outros prestadores de serviço sobre quando abrir empresa e como se organizar para pagar menos.</p>
-            </div>
-
-            <div class="card">
-                <h3>Consultoria contínua
-</h3>
-                <p>Acompanhamento mensal para avisar sobre mudanças na legislação e ajustar o planejamento sempre que o seu negócio mudar.
-</p>
+            <div class="container-card">
+                <div class="card">
+                    <h3>Planejamento tributário</h3>
+                    <p>Estudamos o seu faturamento, as suas despesas e a sua atividade para comparar os regimes possíveis e indicar o que gera menos imposto no seu caso.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Revisão de impostos já pagos</h3>
+                    <p>Analisamos os últimos anos em busca de valores recolhidos a mais e verificamos se há possibilidade de recuperá-los, conforme as regras vigentes.
+                </p>
+                </div>
+                <div class="card">
+                    <h3>Abertura e alteração de empresa</h3>
+                    <p>Abrimos o seu CNPJ já com a atividade e o regime corretos, ou ajustamos uma empresa existente, sem retrabalho.
+                </p>
+                </div>
+                <div class="card">
+                    <h3>Contabilidade completa</h3>
+                    <p>Escrituração, folha de pagamento, obrigações acessórias e declarações em dia, com relatórios claros sobre a saúde financeira do negócio.
+                </p>
+                </div>
+                <div class="card">
+                    <h3>Planejamento para profissionais autônomos</h3>
+                    <p>Orientamos médicos, advogados, consultores, designers e outros prestadores de serviço sobre quando abrir empresa e como se organizar para pagar menos.</p>
+                </div>
+                <div class="card">
+                    <h3>Consultoria contínua
+                </h3>
+                    <p>Acompanhamento mensal para avisar sobre mudanças na legislação e ajustar o planejamento sempre que o seu negócio mudar.
+                </p>
+                </div>
             </div>
 
         </section>
@@ -104,27 +102,28 @@
         <section id="como-funciona" class="section-como-funciona">
 
             <h2>Como funciona o nosso trabalho</h2>
+            <ol>
+    <li>
+      <strong>Passo 1: Conversa inicial.</strong> 
+      <p>Você nos conta sobre o seu negócio, sem compromisso e sem custo.</p>
+    </li>
+    <li>
+      <strong>Passo 2: Diagnóstico.</strong> 
+      <p>Analisamos os seus documentos e identificamos onde há imposto a mais e oportunidades de redução.</p>
+    </li>
+    <li>
+      <strong>Passo 3: Proposta.</strong> 
+      <p>Apresentamos, em linguagem simples, as opções de economia, os riscos de cada uma e o que será necessário fazer.</p>
+    </li>
+    <li>
+      <strong>Passo 4: Execução.</strong> 
+      <p>Cuidamos de toda a parte burocrática e acompanhamos os resultados mês a mês.</p>
+    </li>
+  </ol>
 
-            <div class="passos">
-                <p>Passo 1: Conversa inicial. Você nos conta sobre o seu negócio, sem compromisso e sem custo.</p>
-            </div>
-
-            <div class="passos">
-                <p>Passo 2: Diagnóstico. Analisamos os seus documentos e identificamos onde há imposto a mais e oportunidades de redução.</p>
-            </div>
-
-            <div class="passos">
-                <p>Passo 3: Proposta. Apresentamos, em linguagem simples, as opções de economia, os riscos de cada uma e o que será necessário fazer.</p>
-            </div>
-            <div class="passos">
-                <p>Passo 4: Execução. Cuidamos de toda a parte burocrática e acompanhamos os resultados mês a mês.
-</p>
-            </div>
-
-            <div class="frase-destaque-section-como-funciona">
-                <p>Cada empresa é diferente. Por isso, não prometemos um percentual fixo de economia: mostramos números reais depois de analisar o seu caso.
-</p>
-            </div>
+  <p class="nota-empresa">
+    Cada empresa é diferente. Por isso, não prometemos um percentual fixo de economia: mostramos números reais depois de analisar o seu caso.
+  </p>
 
         </section>
 
@@ -132,27 +131,26 @@
 
                 <div class="container">
 
-            <div class="diferenciais-intro">
+            <div class="diferencial-intro">
                 <h2>Por que escolher a Clareza Contábil</h2>
             </div>
 
-            <div class="diferenciais-conteudo">
+            <div class="diferencial-conteudo">
 
-                <ul class="diferenciais-lista">
+                <ul class="diferencial-lista">
 
-                    <li class="diferenciais-item">
+                    <li class="diferencial-item">
 
-                        <span class="diferencial-marcador"> </span>
-                        <div class="diferenciais-texto">
+                        <span class="diferencial-marcador">01</span>
+                        <div class="diferencial-texto">
                             <h3>Tudo dentro da lei.</h3>
-                            <p>Nosso planejamento segue a legislação e as normas do Conselho Federal de Contabilidade.
-</p>
+                            <p>Nosso planejamento segue a legislação e as normas do Conselho Federal de Contabilidade.</p>
                         </div>
                     </li>
 
                      <li class="diferenciais-item">
 
-                        <span class="diferencial-marcador"> </span>
+                        <span class="diferencial-marcador">02</span>
                         <div class="diferenciais-texto">
                             <h3>Linguagem sem complicação.</h3>
                             <p>Explicamos cada decisão em palavras simples, sem “contabilês”.</p>
@@ -161,7 +159,7 @@
 
                      <li class="diferenciais-item">
 
-                        <span class="diferencial-marcador"> </span>
+                        <span class="diferencial-marcador">03</span>
                         <div class="diferenciais-texto">
                             <h3>Atendimento próximo.</h3>
                             <p>Você fala diretamente com o seu contador, sem robôs nem filas.</p>
@@ -170,7 +168,7 @@
 
                      <li class="diferenciais-item">
 
-                        <span class="diferencial-marcador"> </span>
+                        <span class="diferencial-marcador">04</span>
                         <div class="diferenciais-texto">
                             <h3>Tecnologia a seu favor.</h3>
                             <p>Documentos e relatórios em um painel online, disponível a qualquer hora.
@@ -180,10 +178,10 @@
 
                      <li class="diferenciais-item">
 
-                        <span class="diferencial-marcador"> </span>
+                        <span class="diferencial-marcador">05</span>
                         <div class="diferenciais-texto">
                             <h3>Transparência nos valores. </h3>
-                            <p>Honorários combinados antes de começar, sem taxas </p>
+                            <p>Honorários combinados antes de começar, sem taxas supresas </p>
                         </div>
                     </li>
                 </ul>
@@ -245,14 +243,6 @@
                 </li>
 
                 <li>
-                    <input type="radio" name="accordion" id="fifth">
-                    <label for="fifth">Preciso trocar de contador?</label>
-                    <div class="content">
-                        <p>Não necessariamente. Podemos fazer apenas o planejamento e a revisão, ou assumir toda a contabilidade, o que você preferir.</p>
-                    </div>
-                </li>
-
-                <li>
                     <input type="radio" name="accordion" id="sixth">
                     <label for="sixth">Quanto tempo leva a análise?</label>
                     <div class="content">
@@ -264,7 +254,7 @@
                     <input type="radio" name="accordion" id="seventh">
                     <label for="seventh">Meus dados estão seguros?</label>
                     <div class="content">
-                        <p>Sim. Tratamos todas as informações com sigilo e de acordo com a Lei Geral de Proteção de Dados (LGPD)</p>
+                        <p>Sim. Tratamos todas as informações com sigilo e de acordo com a Lei Geral de Proteção de Dados (LGPD).</p>
                     </div>
                 </li>
 
@@ -286,7 +276,7 @@
                                     Nome completo:
                                 </label>
                                 <div class="input-field">
-                                    <input type="text" name="name" id="name" class="form-control" placeholder="Nome"> <i class="fa-regular fa-user"></i>
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="Nome" requiredpattern=".*\S.*"> <i class="fa-regular fa-user"></i>
                                 </div>
                             </div>
                             <div class="input-box">
@@ -294,7 +284,7 @@
                                     E-mail:
                                 </label>
                                 <div class="input-field">
-                                    <input type="email" name="E-mail" id="E-mail" class="form-control" placeholder="nome@email.com" required oninput="this.setCustomValidity('')"> <i class="fa-regular fa-envelope"></i>
+                                    <input type="email" name="E-mail" id="E-mail" class="form-control" placeholder="nome@email.com" required> <i class="fa-regular fa-envelope"></i>
                                 </div>
                             </div>
                             <div class="input-box">
@@ -302,7 +292,7 @@
                                     Telefone ou WhatsApp:
                                 </label>
                                 <div class="input-field">
-                                    <input type="tel" name="Telefone" id="Telefone" class="form-control" placeholder="xx-xxx-xxxx"> <i class="fa-brands fa-whatsapp"></i>
+                                    <input type="tel" name="Telefone" id="Telefone" class="form-control" placeholder="(11) 99999-9999" required pattern="^\(?\d{2}\)?[\s-]?9?\d{4}-?\d{4}$"> <i class="fa-brands fa-whatsapp"></i>
                                 </div>
                             </div>
                             <div class="input-box">
@@ -391,7 +381,7 @@
 
         <nav class="redes-sociais">
             <ul>
-                <li><a href="instagram.com">Instagram</a></li>
+                <li><a href="#">Instagram</a></li>
                 <li><a href="#">LinkedIn</a></li>
                 <li><a href="#">WhatsApp</a></li>
             </ul>
@@ -402,12 +392,11 @@
             <li><a href="">Termos de Uso</a></li>
             
         </ul>
-        <small class="aviso-legal">
-            <p> Os resultados variam conforme cada empresa e dependem da legislação vigente. O conteúdo deste site tem caráter informativo e não substitui uma análise individual.
-</p>
-        </small>
+        
+            <p class="aviso-legal"> Os resultados variam conforme cada empresa e dependem da legislação vigente. O conteúdo deste site tem caráter informativo e não substitui uma análise individual.</p>
+      
 
-        <small class="direito-resevados">
+        <small class="direito-reservados">
             © 2026 Clareza Contábil. Todos os direitos reservados. CNPJ [número] | CRC-[UF] [número]
         </small>
     </footer>
