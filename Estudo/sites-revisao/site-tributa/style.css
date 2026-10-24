@@ -49,9 +49,9 @@ body {
 .logo {
     text-decoration: none;
     color: var(--azul-escuro-destaque);
-    font-weight: bold;
-    font-size: 1.1rem;
-    letter-spacing: 0.10rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.025rem;
     line-height: 1.5;
 }
 
@@ -66,17 +66,21 @@ body {
     top: 100%;
     left: 0;
     right: 0;
+    z-index: 100;
     background-color: var(--cinza-100);
-    box-shadow: 0px 1px 2px 0px rgb(0, 0, 1,25);
+    box-shadow: 0 0.25rem 0.75rem  rgb(0, 0, 0,12%);
 }
 
 .burger-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: none;
     border: none;
-    width: 2.6rem;
-    height: 2.6rem;
+    width: 2.75rem;
+    height: 2.75rem;
     font-family: inherit;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
@@ -84,41 +88,59 @@ body {
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    gap: 1.5rem;
+    gap: 0;
+    list-style: none;
+    padding: 0.5rem 0;
 }
 
-.menu-lista li {
-    list-style: none;
-     
-}
+
 
 .menu-lista > li > a {
+    display: block;
+    width: 100%;
  text-decoration: none;
  color: var(--azul-escuro-destaque);
  font-weight: 500;
- font-size: 1.125rem;
-display: block;
-transition: background-color 0.4s ease;
+ font-size: 1rem;
+padding: 0.75rem 1rem;
+transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.menu-lista > li:hover {
-    background-color: var(--cinza-200);
+.menu-lista > li > a:hover {
+    background-color: #E5EAF3;
 }
 
-.botao-contato-menu {
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 1rem;
-    background-color: var(--azul-ctas-links);
-    color:var(--branco);
-    border-radius: 0.8rem;
-    text-align: center;
-    min-height: 2.75rem;
+.menu-lista > li > a:focus-visible,
+.burger-menu:focus-visible {
+    outline: 0.1875rem solid var(--azul-claro-detalhes);
+    outline-offset: -0.1875rem;
 }
 
 .menu-lista > .botao-contato-menu > a {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    min-height: 2.75rem;
+    border-radius: 0.5rem;
+    background-color: var(--azul-ctas-links);
     color: var(--branco);
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.2s ease;
 }
+
+.menu-lista > .botao-contato-menu > a:hover {
+    background-color: var(--azul-escuro-destaque);
+}
+
+.menu-lista > .botao-contato-menu > a:focus-visible {
+    outline: 0.1875rem solid var(--azul-claro-detalhes);
+    outline-offset: 0.125rem;
+}
+
+
+
 
 
 
@@ -137,4 +159,23 @@ transition: background-color 0.4s ease;
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (prefers-reduced-motion: reduce) {
+    .menu-lista > li > a,
+    .menu-lista > .botao-contato-menu > a {
+        transition: none;
+    }
 }
