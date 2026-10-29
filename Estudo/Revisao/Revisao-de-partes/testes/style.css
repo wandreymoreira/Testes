@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh; 
+    line-height: 1.5; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility; 
+}
+
+
+.contanine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.bnt {
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+}
+
+.bnt:hover {
+    transform: scale(1.1);
+    background-color: darkgreen;
+    color: white;
+}
+
+
+
