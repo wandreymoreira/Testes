@@ -83,3 +83,76 @@ transform: scale(1.1);
     padding-left: 1rem;
    
 }
+
+
+.hero {
+    display: flex;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    padding-top: 5.75rem;
+    min-height: 80vh;
+    background-image: url(imagens/background-hero-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-attachment: scroll;
+    width: 83.813rem;
+    height: 30rem;
+}
+
+
+
+.conteudo-hero {
+    max-width: 60.25rem;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    
+}
+
+.hero > .conteudo-hero > h1 {
+    font-size: 3.125rem;
+    color: #FFFFFF;
+    text-align: center;
+    
+}
+
+.bnt-contato-hero {
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    border: none;
+    background-color: #FFFFFF;
+   padding: 0.5rem;
+   border-radius: 0.3rem;
+   cursor: pointer;
+   margin: 1.5rem 0 ;
+    transition: transform 0.3s ease;
+}
+
+.bnt-contato-hero:hover {
+    transform: scale(1.1);
+}
+
+.hero > .conteudo-hero > p {
+    font-size: 1.125rem;
+    color: #FFFFFF;
+    text-align: center;
+}
+.atuacao {
+    height: 20rem;
+}
+.atuacao > h2 {
+    text-align: center;
+    margin: 2rem;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+    max-width: 40rem;
+    margin: auto;
+}
