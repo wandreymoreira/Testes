@@ -22,29 +22,55 @@ body {
   text-rendering: optimizeLegibility; 
 }
 
+.header {
+background-color: #ffffff;
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.08);
+  width: 100%;
+}
 
-.contanine {
+.header__container {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 1.5rem;
+}
+
+/* Por padrão, exibe o ícone de barras e esconde o X */
+.header__menu-btn .header__icon-close {
+  display: none;
+}
+
+.header__menu-btn .header__icon-bars {
+  display: block;
+}
+
+/* Quando o botão recebe a classe --active (menu aberto), inverte: */
+.header__menu-btn.header__menu-btn--active .header__icon-bars {
+  display: none;
+}
+
+.header__menu-btn.header__menu-btn--active .header__icon-close {
+  display: block;
+}
+
+.header__nav {
+    display: none;
+}
+
+.header__nav--open {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.bnt {
-    font-size: 1rem;
-    padding: 1rem;
-    border-radius: 1rem;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.3s ease;
 
 }
 
-.bnt:hover {
-    transform: scale(1.1);
-    background-color: darkgreen;
-    color: white;
+.header__menu {
+
 }
 
+.header__item {
 
+}
+
+.header__link {
+
+}
 
