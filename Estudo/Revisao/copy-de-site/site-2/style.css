@@ -33,7 +33,7 @@ body {
 }
 
 .hero {
-  min-height: 100vh;
+  
   background-color: var(--cor-de-hero);
   padding: 1rem;
   
@@ -90,30 +90,22 @@ margin: auto;
 }
 
 .hero__container-card {
-  margin-top: 2rem;
-  display: flex;
-  flex: 12;
-  padding: 0 0 15px 0;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+ margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Cria 2 colunas de tamanhos iguais */
+    gap: 1rem; /* Espaço uniforme entre os cards */
+    align-items: stretch; /* Garante que todos tenham a mesma altura */
 }
 
 .hero__card {
 background-color: var(--cor-cards);
-display: flex;
-width: 100%;
-max-width: 140px;
-flex-wrap: wrap;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-border-radius: 10px;
-margin: 0.5rem;
-padding: 1.25rem;
-overflow: hidden;
-text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 1.25rem;
+    text-align: center;
 
 }
 
@@ -131,11 +123,30 @@ display: block;
 .hero-btn {
   display: block;
   padding: 0.70rem 2rem;
+  max-width: 320px;
+  width: 100%;
   border-radius: 8px;
   font-size: 1.5rem;
   text-decoration: none;
-  margin-top: 2rem;
+  margin: 2rem auto 0 auto;
+  text-align: center;
   font-weight: bold;
 background-color: var(--cor-do-botao);
 color: var(--cor-titulo);
+
+}
+
+
+
+
+
+@media (min-width: 768px) {
+    /* Exemplo para os cards ficarem em linha no desktop */
+    .hero__container-card {
+        grid-template-columns: repeat(4, 4fr); /* 4 colunas lado a lado */
+    }
+
+    .hero-btn { 
+      max-width: 420px;
+    }
 }
