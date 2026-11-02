@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main">
+        <section class="form-container">
+            <h1 class="form-container__title">Entre em Contato</h1>
+            <p class="form-container__subtitle">Preencha os campos abaixo para enviar sua mensagem.</p>
+            
+            <form class="form" action="#" method="POST">
+                <div class="form__group">
+                    <label class="form__label" for="name">Nome</label>
+                    <input class="form__input" type="text" id="name" name="name" placeholder="Seu nome completo" required>
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label" for="email">E-mail</label>
+                    <input class="form__input" type="email" id="email" name="email" placeholder="seu@email.com" required>
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label" for="message">Mensagem</label>
+                    <textarea class="form__textarea" id="message" name="message" rows="4" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                </div>
+
+                <button class="form__button" type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
